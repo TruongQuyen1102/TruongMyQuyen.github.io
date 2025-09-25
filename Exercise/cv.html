@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Professional CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#2b6cb0;
+      --muted:#6b7280;
+      --bg:#f7fafc;
+      --card:#ffffff;
+      --glass: rgba(255,255,255,0.6);
+      --radius:12px;
+      --max-width:900px;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#ffffff);
+      color:#111827;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+    .cv{
+      width:100%;
+      max-width:var(--max-width);
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 8px 30px rgba(2,6,23,0.08);
+      overflow:hidden;
+      display:grid;
+      grid-template-columns: 280px 1fr;
+      gap:0;
+    }
+    /* Left column */
+    .side{
+      background:linear-gradient(180deg,var(--accent),#2b8bd3);
+      color:#fff;
+      padding:28px 22px;
+      min-height:100%;
+    }
+    .photo{
+      width:120px;
+      height:120px;
+      background:rgba(255,255,255,0.18);
+      border-radius:50%;
+      display:block;
+      margin:0 auto 16px auto;
+      overflow:hidden;
+      border:3px solid rgba(255,255,255,0.18);
+    }
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .name{ text-align:center; font-size:20px; font-weight:700; margin-bottom:6px }
+    .role{ text-align:center; font-size:13px; opacity:0.92; margin-bottom:18px }
+    .contact{ font-size:13px; line-height:1.6; color:rgba(255,255,255,0.95) }
+    .divider{height:1px;background:rgba(255,255,255,0.12);margin:18px 0;border-radius:6px}
+    .skill-list{ display:flex; flex-direction:column; gap:8px }
+    .skill{ background:rgba(255,255,255,0.08); padding:8px 10px;border-radius:8px; font-size:13px }
+    .small{font-size:12px; opacity:0.9}
+
+    /* Right column */
+    .main{ padding:28px 30px }
+    .section{ margin-bottom:18px }
+    h1.title{ font-size:22px; margin:0 0 8px 0 }
+    .summary{ color:var(--muted); line-height:1.6 }
+    .work{
+      display:flex; flex-direction:column; gap:14px; margin-top:8px
+    }
+    .job{ padding:12px 14px; border-radius:10px; background:linear-gradient(180deg,#fff,#fbfdff); box-shadow:0 2px 8px rgba(13,18,31,0.03); border:1px solid rgba(15,23,42,0.03) }
+    .job .job-title{ font-weight:600 }
+    .job .meta{ font-size:13px; color:var(--muted); margin-top:6px }
+    .job ul{ margin:8px 0 0 18px }
+
+    .education{ display:flex; flex-direction:column; gap:10px }
+    .edu-item{ font-size:14px }
+
+    .skills-grid{ display:flex; flex-wrap:wrap; gap:8px; margin-top:8px }
+    .chip{ background: #eef2ff; color:#1e293b; padding:6px 10px; border-radius:999px; font-size:13px }
+
+    /* print friendly */
+    @media print{
+      body{ padding:0 }
+      .cv{ box-shadow:none; max-width:100%; grid-template-columns: 220px 1fr }
+    }
+
+    /* responsive */
+    @media (max-width:800px){
+      .cv{ grid-template-columns: 1fr; }
+      .side{ text-align:center }
+      .main{ padding:20px }
+    }
+  </style>
+</head>
+<body>
+  <article class="cv">
+    <aside class="side">
+      <div class="photo">
+        <!-- Thêm ảnh của bạn ở đây (đổi src) -->
+        <img src="https://via.placeholder.com/300" alt="Your photo">
+      </div>
+      <div class="name">Queen Truong</div>
+      <div class="role">Aspiring Data Analyst</div>
+
+      <div class="divider"></div>
+      <div class="contact">
+        <div class="small">📍 Hanoi, Vietnam</div>
+        <div class="small">✉️ email@example.com</div>
+        <div class="small">📞 +84 9xx xxx xxx</div>
+        <div class="small">🔗 github.com/yourname</div>
+      </div>
+
+      <div class="divider"></div>
+      <div>
+        <h3 style="margin:0 0 10px 0; font-size:14px; font-weight:700">Skills</h3>
+        <div class="skill-list">
+          <div class="skill">SQL • Excel • Data Analysis</div>
+          <div class="skill">HTML • CSS • Basic JS</div>
+          <div class="skill">Business Analysis • Research</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div>
+        <h3 style="margin:0 0 10px 0; font-size:14px; font-weight:700">Languages</h3>
+        <div class="small">Vietnamese (Native)</div>
+        <div class="small">English (Intermediate)</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="section">
+        <h1 class="title">Professional Summary</h1>
+        <p class="summary">Analytical and curious aspiring data analyst with experience in data cleaning, basic visualization, and business analysis. Passionate about turning data into insights to support better decisions. Ready to learn and collaborate on real projects.</p>
+      </header>
+
+      <section class="section">
+        <h2 style="margin:0 0 8px 0; font-size:16px">Work Experience</h2>
+        <div class="work">
+          <div class="job">
+            <div class="job-title">Store Manager — VinFast (Intern/Part-time)</div>
+            <div class="meta">Cầu Giấy, Hà Nội • Apr 2025 – Present</div>
+            <ul>
+              <li>Managed showroom operations and customer service.</li>
+              <li>Analyzed sales data to support inventory decisions.</li>
+              <li>Coordinated with team to improve customer satisfaction.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <div class="job-title">Project Design — Pharmacy Management System (Student Project)</div>
+            <div class="meta">Apr 2025 • Team Project</div>
+            <ul>
+              <li>Designed system architecture and database models for 5-store chain.</li>
+              <li>Defined functional models and cloud hosting approach (AWS).</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 style="margin:0 0 8px 0; font-size:16px">Education</h2>
+        <div class="education">
+          <div class="edu-item"><strong>University Name</strong> — BSc in Information Systems (Expected 2026)</div>
+          <div class="edu-item">Relevant: Data Analysis, Information Systems Modeling, Networking (TCP)</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 style="margin:0 0 8px 0; font-size:16px">Projects & Certificates</h2>
+        <div>
+          <div class="small">Google Data Analyst (in progress) • Coursera</div>
+          <div style="margin-top:8px" class="skills-grid">
+            <div class="chip">SQL</div>
+            <div class="chip">Excel</div>
+            <div class="chip">Google Data Studio</div>
+            <div class="chip">Business Analysis</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 style="margin:0 0 8px 0; font-size:16px">Interests</h2>
+        <p class="summary">Reading, trying local coffee, learning languages, joining guided tours of Hanoi Old Quarter.</p>
+      </section>
+
+    </main>
+  </article>
+</body>
+</html>
