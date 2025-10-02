@@ -1,6 +1,15 @@
 p{
             color: red;
         }
-        .gach-ngang {
+        h1.gach-ngang {
             text-decoration: line-through;
+        }
+        
+        dac-biet{
+            font-weight: bold;
+            color: red;
+        }
+
+        p#special {
+            background-color: yellow;
         }
