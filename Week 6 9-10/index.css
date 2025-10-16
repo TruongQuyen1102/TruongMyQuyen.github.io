@@ -1,0 +1,15 @@
+p {
+    color: green;
+}
+
+p#underline {
+    text-decoration: underline;
+}
+
+h1.line-through#underline {
+    text-decoration: line-through;
+}
+
+ol.special-list p {
+    color: red;
+}
