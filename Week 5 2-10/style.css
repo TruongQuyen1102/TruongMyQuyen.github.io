@@ -11,5 +11,42 @@ p{
         }
 
         p#special {
-            background-color: yellow;
+            background-color:blue;
         }
+
+.apple { color: red }
+
+.orange { color: orange }
+
+.small { font-size: 16px }
+
+.apple.orange {
+font-style: italic;
+}
+
+a[title="menu"] {
+text-decoration: none;
+color: #962103;
+font-size: 22px;
+}
+
+h1#header.intro {
+text-decoration:
+underline;
+color: #C00;
+}
+
+a:hover {
+color: #D48F29;
+text-decoration:
+underline overline;
+}
+
+html:active {
+background: yellow;
+}
+
+p:first-line {
+color:blue;
+background-color: lightblue;
+}
