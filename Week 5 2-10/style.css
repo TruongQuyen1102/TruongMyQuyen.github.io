@@ -11,7 +11,7 @@ p{
         }
 
         p#special {
-            background-color:blue;
+            background-color: greenyellow;
         }
 
 .apple { color: red }
@@ -46,7 +46,7 @@ html:active {
 background: yellow;
 }
 
-p:first-line {
+section p:first-line {
 color:blue;
 background-color: lightblue;
 }
